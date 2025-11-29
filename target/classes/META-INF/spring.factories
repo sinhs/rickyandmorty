@@ -1,0 +1,2 @@
+org.springframework.data.jdbc.repository.config.DialectResolver$JdbcDialectProvider=\
+com.sid.rickmorty.config.SqliteDialectProvider

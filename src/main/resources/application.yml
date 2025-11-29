@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: rick-morty-service
+  datasource:
+    url: jdbc:sqlite:./data/rickmorty.db
+    driver-class-name: org.sqlite.JDBC
+  sql:
+    init:
+      mode: always
+  jdbc:
+    template:
+      fetch-size: 200
+  main:
+    banner-mode: off
+server:
+  port: 8080
+
+rickmorty:
+  api-base: https://rickandmortyapi.com/api
+  ingestion:
+    enabled: true
+    initial-delay: PT2S
+    refresh-interval: PT30M
+
+llm:
+  provider: mock
+  openai:
+    api-key: ${OPENAI_API_KEY:}
+    base-url: https://api.openai.com/v1
